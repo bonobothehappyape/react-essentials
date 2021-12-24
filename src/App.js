@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
+// https://api.github.com/users/bonobothehappyape
+
 function App() {
   const [data, setData] = useState(null);
 
@@ -11,7 +13,13 @@ function App() {
   }, []);
 
   if (data) {
-    return <div>{JSON.stringify(data)}</div>;
+    return (
+      <div>
+        <h1>{data.name}</h1>
+        <p>{data.location}</p>
+        <img alt={data.login} src={data.avatar_url} />
+      </div>
+    );
   }
 
   return <div>No Data Available</div>;
