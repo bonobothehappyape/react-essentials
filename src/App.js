@@ -3,7 +3,7 @@ import "./App.css";
 
 // https://api.github.com/users/bonobothehappyape
 
-function App(login) {
+function App({login}) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -27,8 +27,8 @@ function App(login) {
   if (data) {
     return (
       <div>
-        <h1>{data.name}</h1>
-        <p>{data.location}</p>
+        <h1>name: {data.name}</h1>
+        <p>location: {data.location}</p>
         <img alt={data.login} src={data.avatar_url} />
       </div>
     );
