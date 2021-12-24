@@ -3,7 +3,7 @@ import "./App.css";
 
 // https://api.github.com/users/bonobothehappyape
 
-function App() {
+function App(login) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
